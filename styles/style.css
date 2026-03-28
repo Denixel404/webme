@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px)
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  animation: fadeInUp 3s ease forwards;
+}
+
+.animated-el {
+  opacity: 0;
+}
+
+.animated-el.visible {
+  animation: fadeInRight 1s ease forwards;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-attachment: fixed;
+  border-radius: 75px;
+  background-color: #050220;
+}
+
+footer {
+  background-color:rgb(21, 21, 72);
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Rubik";
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: white;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+p {
+  font-size: 1.125rem;
+  color: white;
+}
+
+p.limited {
+  max-width: 85%;
+}
+
+li {
+  font-size: 1.125rem;
+  color: white;
+}
+
+span {
+  color:gold;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 75%;
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  color: white;
+  background-color: rgb(0, 0, 36);
+  font-family: "Rubik";
+  font-size: 2em;
+  padding: 10px;
+  z-index: 10;
+}
+
+header h2 {
+  color: white; 
+  font-size: 2rem; 
+  margin-bottom: 50px; 
+  text-align:left; 
+  margin-top: 0;
+}
+
+button {
+  width: 200px;
+  margin: 40px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 25px;
+  transition: background-color 0.3s linear;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: 0;
+  gap: 20%;
+  height: 650px;
+  width: 100%;
+  padding: 25px;
+  padding-top: 125px;
+  background: linear-gradient(45deg, #001138, #040034, #0f0038, #1c0033);
+}
+
+.banner div {
+  width: 40%;
+}
+
+#about {
+  transform: translateY(-100px);
+}
+.out {
+  margin: 30px;
+  text-align: center;
+}
+.row-container {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.advantages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(1, 0, 21);
+  border: 2px solid gold;
+  padding: 30px;
+  max-width: 25%;
+}
+
+.advantages p {
+  color: white;
+  text-align: center;
+}
+
+.advantages h3 {
+  color: gold;
+  font-family: "Rubik";
+  text-align: center;
+}
+
+.screenshots {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.screenshots img {
+  height: 750px;
+  width: auto;
+  margin: 30px;
+  border: 2px solid gold;
+}
+
+.block {
+  width: 100%;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, #060b17, #0a1226);
+  padding: 50px;
+  padding-bottom: 100px;
+  z-index: 1;
+  transform: translateY(-50px);
+}
+
+.block.dev {
+  z-index: 2;
+  transform: translateY(50px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  header {
+    height: 65px;
+    gap: 50%;
+    font-size: 19px;
+  }
+
+  button {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner div {
+    width: 100%;
+  }
+
+  .block {
+    padding: 17px;
+  }
+
+  #about {
+    transform: translateY(-75px);
+  }
+
+  .row-container {
+    flex-direction: column;
+  }
+
+  .advantages {
+    max-width: 100%;
+  }
+
+  .screenshots {
+    flex-direction: column;
+  }
+
+  img.screens {
+    margin: 5px;
+    height: 400px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  #web-img {
+    display: none;
+  }
+
+  #bricks {
+    display: none;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 769px) {
+
+  header {
+    gap: 60%
+  }
+
+  .banner div {
+    max-width: 50%;
+  }
+
+  .row-container {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .advantages {
+    max-width: none;
+    flex-basis: 49.5%;
+    box-sizing: border-box;
+  }
+
+  img.screens {
+    margin: 5px;
+    height: 550px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  #web-img {
+    height: 300px;
+  }
+
+  #bricks {
+    height: 200px;
+  }
+
+}
